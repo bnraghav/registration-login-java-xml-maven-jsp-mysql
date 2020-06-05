@@ -18,7 +18,7 @@ jobs:
     - name: Set up Java version
       uses: actions/setup-java@v1
       with:
-        java-version: '11'
+        java-version: '8'
 
     - name: Build with Maven
       run: mvn clean install
@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'logindemo1'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2285252592e1422a9764e2604ee83549 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a487f56b4fca4a2298e83388097b321f }}
         package: '${{ github.workspace }}/target/*.jar'
